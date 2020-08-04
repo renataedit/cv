@@ -1,0 +1,531 @@
+/* CSS Reset */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+/* Variables */
+
+$xs: 	576px;
+$sm: 	768px;
+$md: 	992px;
+$lg: 	1200px;
+
+$darkgrey: 		#27272c;
+$background: 	#2d2840;
+$font-color: 	#c2c0cc;
+$red: 			#bf4e6d;
+$peach: 		#ffa5a4;
+$peach-s10:		rgba(255,230,229,0.15);
+
+/* Fonts */
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url('../fonts/RobotoCondensed-LightItalic.woff2') format('woff2'),
+	url('../fonts/RobotoCondensed-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-LightItalic.woff2') format('woff2'),
+	url('../fonts/Roboto-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Light.woff2') format('woff2'),
+	url('../fonts/Roboto-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url('../fonts/RobotoCondensed-Light.woff2') format('woff2'),
+	url('../fonts/RobotoCondensed-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-ThinItalic.woff2') format('woff2'),
+	url('../fonts/Roboto-ThinItalic.woff') format('woff');
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url('../fonts/RobotoCondensed-BoldItalic.woff2') format('woff2'),
+	url('../fonts/RobotoCondensed-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Italic.woff2') format('woff2'),
+	url('../fonts/Roboto-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+	url('../fonts/Roboto-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+	url('../fonts/Roboto-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+	url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-MediumItalic.woff2') format('woff2'),
+	url('../fonts/Roboto-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-BoldItalic.woff2') format('woff2'),
+	url('../fonts/Roboto-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Thin.woff2') format('woff2'),
+	url('../fonts/Roboto-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Black.woff2') format('woff2'),
+	url('../fonts/Roboto-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+	url('../fonts/Roboto-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url('../fonts/RobotoCondensed-Italic.woff2') format('woff2'),
+	url('../fonts/RobotoCondensed-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-BlackItalic.woff2') format('woff2'),
+	url('../fonts/Roboto-BlackItalic.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+	url('../fonts/RobotoCondensed-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* General settings */
+
+body {
+	position: relative;
+	max-width: 1140px;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 70px 40px;
+	line-height: 1.5;
+	color: $font-color;
+	background-color: $background;
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+
+	@media only screen and (max-width: $xs) {
+		font-size: 16px;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Roboto Condensed", sans-serif;
+	color: $peach;
+	line-height: 1;
+}
+
+h1 {
+	font-size: 60px;
+
+	@media only screen and (max-width: $md) {
+		font-size: 48px;
+	}
+
+	@media only screen and (max-width: $xs) {
+		font-size: 42px;
+	}
+}
+
+h2 {
+	font-size: 42px;
+	margin-bottom: 20px;
+
+	@media only screen and (max-width: $md) {
+		font-size: 36px;
+	}
+
+	@media only screen and (max-width: $xs) {
+		font-size: 30px;
+	}
+}
+
+h3 {
+	font-size: 34px;
+	color: $red;
+
+	@media only screen and (max-width: $md) {
+		font-size: 28px;
+	}
+
+	@media only screen and (max-width: $xs) {
+		font-size: 24px;
+	}
+}
+
+h4 {
+	font-size: 28px;
+	color: $red;
+
+	@media only screen and (max-width: $md) {
+		font-size: 24px;
+	}
+
+	@media only screen and (max-width: $md) {
+		font-size: 20px;
+	}
+}
+
+a { color: $font-color; }
+
+p { margin-bottom: 10px; }
+
+section {
+	margin-bottom: 50px;
+
+	@media only screen and (max-width: $md) {
+		margin-bottom: 30px;
+	}
+
+	@media only screen and (max-width: $xs) {
+		margin-bottom: 20px;
+	}
+}
+
+article {
+	margin-bottom: 30px;
+
+	@media only screen and (max-width: $xs) {
+		margin-bottom: 20px;
+	}
+}
+
+/* Blocks */
+header {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 70px;
+
+	@media only screen and (max-width: $xs) {
+		display: block;
+		margin-bottom: 35px;
+	}
+}
+
+.avatar {
+	border: 2px solid #FFF;
+	border-radius: 50%;
+	width: 120px;
+	height: auto;
+	margin-right: 20px;
+
+	@media only screen and (max-width: $xs) {
+		display: block;
+		margin: 0 auto 10px auto;
+	}
+}
+
+.header-title {
+	@supports (display: grid) {
+		display: inline-grid;
+		grid-template-columns: auto 1fr;
+		align-items: center;
+	}
+
+	@media only screen and (max-width: $xs) {
+		display: block;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	&__name { grid-column: 1 / 3; }
+
+	&__desc { font-size: 22px; }
+
+	&__line {
+		display: inline-block;
+		height: 1px;
+		margin-left: 10px;
+		background-color: $font-color;
+	}
+}
+
+.contact-info {
+	margin-left: auto;
+	text-align: right;
+	font-family: 'Monda', sans-serif;
+	
+	@media only screen and (max-width: $sm) {
+		width: 100%;
+		margin-top: 10px;
+		margin-left: 0;
+		text-align: left;
+	}
+
+	@media only screen and (max-width: $xs) {
+		margin-top: 0;
+		text-align:center;
+	}
+}
+
+.container {
+	display: flex;
+
+	@media only screen and (max-width: $md) {
+		display: block;
+	}
+
+	&__left {
+		width: 34%;
+
+		@media only screen and (max-width: $md) {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			margin-bottom: 30px;
+
+			@supports (display: grid){
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 0 30px;
+			}
+		}
+
+		@media only screen and (max-width: $sm) {
+			display: block;
+		}
+	}
+
+	&__right {
+		width: 60%;
+
+		@media only screen and (max-width: $md) {
+			width: 100%;
+		}
+	}
+}
+
+.primary-skills {
+	@media only screen and (max-width: $md) {
+		width: 48%;
+		margin-right: 4%;
+
+		@supports (display: grid){
+			width: auto;
+			margin-right: 0;
+		}
+	}
+
+	@media only screen and (max-width: $sm) {
+		width: 100%;
+		margin-right: 0;
+	}
+}
+
+.other-skills {
+	@media only screen and (max-width: $md) {
+		width: 48%;
+
+		@supports (display: grid){
+			width: auto;
+		}
+	}
+
+	@media only screen and (max-width: $sm) {
+		width: 100%;
+	}
+}
+
+.skills-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+		margin: 0 4px 4px 0;
+		padding: 5px 8px;
+		border: 0;
+		border-radius: 3px;
+		background-color: $peach-s10;
+
+		&--last {
+			margin-right: 0;
+		}
+	}
+}
+
+.languages {
+	@media only screen and (max-width: $md) {
+		width: 48%;
+		margin-right: 4%;
+
+		@supports (display: grid){
+			width: auto;
+			margin-right: 0;
+		}
+	}
+
+	@media only screen and (max-width: $sm) {
+		width: 100%;
+		margin-right: 0;
+	}
+}
+
+.hobbies {
+	@media only screen and (max-width: $md) {
+		width: 48%;
+
+		@supports (display: grid){
+			width: auto;
+		}
+	}
+
+	@media only screen and (max-width: $sm) {
+		width: 100%;
+	}
+}
+
+.offset--6 { width: 6%; }
+
+.date {
+	display: block;
+	margin-bottom: 15px;
+	font-style: italic;
+	font-size: 16px;
+
+	@media only screen and (max-width: $xs) {
+		margin-bottom: 8px;
+	}
+}
+
+.work-experience-list {
+	border-left: 2px solid $font-color;
+	padding: 20px 0 20px 30px;
+
+	@media only screen and (max-width: $xs) {
+		padding: 10px 0 10px 25px;
+	}
+
+	&__item {
+		position: relative;
+		margin-bottom: 35px;
+
+		@media only screen and (max-width: $xs) {
+			margin-bottom: 20px;
+		}
+
+		&:before {
+			position: absolute;
+			left: -38px;
+			top: -14px;
+			content: "\2022";
+			font-size: 45px;
+
+			@media only screen and (max-width: $xs) {
+				left: -34px;
+				top: -21px;
+			}
+		}
+
+		&--last {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.education-list {
+	&__item {
+		margin-bottom: 35px;
+
+		@media only screen and (max-width: $xs) {
+			margin-bottom: 20px;
+		}
+	}
+}
